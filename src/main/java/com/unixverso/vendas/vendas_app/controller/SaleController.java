@@ -12,7 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
 @RequestMapping(value = "/vendas")
 @Tag(name = "Vendas", description = "API para controle de vendas")
-public class VendasController {
+public class SaleController {
 
     @Operation(summary = "Cadastrar uma nova venda")
     @ApiResponses(value = {
