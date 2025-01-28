@@ -8,6 +8,7 @@ import com.unixverso.vendas.vendas_app.business.dto.UserRequestDTO;
 import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTO;
 import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTORecords;
 import com.unixverso.vendas.vendas_app.business.mapstruct.UserMapper;
+import com.unixverso.vendas.vendas_app.business.mapstruct.UserUpdate;
 import com.unixverso.vendas.vendas_app.infrastructure.model.entities.UserEntity;
 import com.unixverso.vendas.vendas_app.infrastructure.repository.UserRepository;
 
@@ -19,12 +20,12 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final UserMapper userMapper;
-    // private final UserUpdate userUpdate;
+    private final UserUpdate userUpdate;
 
-    public UserResponseDTORecords saveUserDTO(UserRequestDTO request) {
+    public UserResponseDTO saveUserDTO(UserRequestDTO request) {
 
         UserEntity entity = userRepository.save(userMapper.toEntity(request));
-        return userMapper.toUserDTORecords(entity);
+        return userMapper.toUserDTO(entity);
     }
 
     public List<UserResponseDTO> findAll() {
@@ -43,10 +44,21 @@ public class UserService {
 
     }
 
-    public UserResponseDTO findByEmail(String email) {
+    public UserResponseDTORecords findByEmail(String email) {
 
         UserEntity entity = userRepository.findByEmail(email);
-        return userMapper.toUserDTO(entity);
+        return userMapper.toUserDTORecords(entity);
+    }
+
+    public UserResponseDTORecords updateUser(UserRequestDTO request, Long id) {
+
+        UserEntity entity = userRepository.findById(id).orElseThrow(
+                () -> new RuntimeException("User not found"));
+
+        userUpdate.userUpdate(request, entity);
+
+        return userMapper.toUserDTORecords(userRepository.save(entity));
+
     }
 
     public Boolean deleteByEmail(String email) {

@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
 @RequestMapping(value = "/usuario")
@@ -57,7 +58,7 @@ public class UserController {
             @ApiResponse(responseCode = "500", description = "Erro ao realizar busca dos dados"),
     })
     @GetMapping("/buscarEmail/email={email}")
-    public ResponseEntity<UserResponseDTO> buscarPorEmail(@RequestParam String email) {
+    public ResponseEntity<UserResponseDTORecords> buscarPorEmail(@RequestParam String email) {
         return ResponseEntity.ok().body(userService.findByEmail(email));
     }
 
@@ -81,10 +82,18 @@ public class UserController {
     })
 
     @PostMapping("/cadastrar")
-    public ResponseEntity<UserResponseDTORecords> cadastrarUsuario(@RequestBody UserRequestDTO request) {
+    public ResponseEntity<UserResponseDTO> cadastrarUsuario(@RequestBody UserRequestDTO request) {
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/usuario/{id}")
                 .buildAndExpand(request.getEmail()).toUri();
         return ResponseEntity.created(uri).body(userService.saveUserDTO(request));
+    }
+
+    @PutMapping("path/{id}")
+    public ResponseEntity<UserResponseDTORecords> putMethodName(@PathVariable Long id,
+            @RequestBody UserRequestDTO request) {
+
+        userService.updateUser(request, id);
+        return ResponseEntity.ok().body(userService.updateUser(request, id));
     }
 
     @Operation(summary = "Deletar usuario por Email")
