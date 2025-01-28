@@ -7,6 +7,7 @@ import org.mapstruct.Mapping;
 
 import com.unixverso.vendas.vendas_app.business.dto.UserRequestDTO;
 import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTO;
+import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTOnew;
 import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTORecords;
 import com.unixverso.vendas.vendas_app.infrastructure.model.entities.UserEntity;
 
