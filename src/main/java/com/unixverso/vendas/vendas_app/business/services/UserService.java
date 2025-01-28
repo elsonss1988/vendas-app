@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.unixverso.vendas.vendas_app.business.dto.UserRequestDTO;
 import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTO;
+import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTORecords;
 import com.unixverso.vendas.vendas_app.business.mapstruct.UserMapper;
 import com.unixverso.vendas.vendas_app.infrastructure.model.entities.UserEntity;
 import com.unixverso.vendas.vendas_app.infrastructure.repository.UserRepository;
@@ -20,10 +21,10 @@ public class UserService {
     private final UserMapper userMapper;
     // private final UserUpdate userUpdate;
 
-    public UserResponseDTO saveUserDTO(UserRequestDTO request) {
+    public UserResponseDTORecords saveUserDTO(UserRequestDTO request) {
 
         UserEntity entity = userRepository.save(userMapper.toEntity(request));
-        return userMapper.toUserDTO(entity);
+        return userMapper.toUserDTORecords(entity);
     }
 
     public List<UserResponseDTO> findAll() {

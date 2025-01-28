@@ -8,6 +8,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.unixverso.vendas.vendas_app.business.dto.UserRequestDTO;
 import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTO;
+import com.unixverso.vendas.vendas_app.business.dto.UserResponseDTORecords;
 import com.unixverso.vendas.vendas_app.business.services.UserService;
 import com.unixverso.vendas.vendas_app.infrastructure.repository.UserRepository;
 
@@ -80,7 +81,7 @@ public class UserController {
     })
 
     @PostMapping("/cadastrar")
-    public ResponseEntity<UserResponseDTO> cadastrarUsuario(@RequestBody UserRequestDTO request) {
+    public ResponseEntity<UserResponseDTORecords> cadastrarUsuario(@RequestBody UserRequestDTO request) {
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/usuario/{id}")
                 .buildAndExpand(request.getEmail()).toUri();
         return ResponseEntity.created(uri).body(userService.saveUserDTO(request));
