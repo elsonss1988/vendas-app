@@ -8,7 +8,9 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 @RequestMapping(value = "/vendas")
 @Tag(name = "Vendas", description = "API para controle de vendas")
@@ -29,6 +31,7 @@ public class SaleController {
     @Operation(summary = "Listar todas as vendas")
     @RequestMapping("/listar")
     public String listar() {
+        log.info("Lista de vendas");
         return "vendas/lista";
     }
 

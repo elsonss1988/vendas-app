@@ -1,0 +1,976 @@
+2025-02-03T01:08:26.909-03:00  INFO 21356 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 21356 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T01:08:26.925-03:00  INFO 21356 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T01:08:28.095-03:00  INFO 21356 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T01:08:28.182-03:00  INFO 21356 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interface.
+2025-02-03T01:08:28.491-03:00  INFO 21356 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b8e9685a-8e54-3db7-91ea-c10a840c4a09
+2025-02-03T01:08:28.953-03:00  INFO 21356 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T01:08:28.979-03:00  INFO 21356 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T01:08:28.980-03:00  INFO 21356 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T01:08:29.077-03:00  INFO 21356 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T01:08:29.078-03:00  INFO 21356 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2069 ms
+2025-02-03T01:08:29.281-03:00  INFO 21356 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T01:08:29.386-03:00  INFO 21356 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T01:08:29.444-03:00  INFO 21356 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T01:08:29.842-03:00  INFO 21356 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T01:08:29.883-03:00  INFO 21356 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T01:08:30.164-03:00  INFO 21356 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T01:08:30.167-03:00  INFO 21356 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T01:08:30.274-03:00  INFO 21356 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T01:08:31.417-03:00  INFO 21356 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T01:08:31.477-03:00  INFO 21356 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T01:08:32.030-03:00  INFO 21356 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T01:08:32.310-03:00  WARN 21356 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T01:08:32.458-03:00  INFO 21356 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T01:08:32.735-03:00  INFO 21356 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T01:08:32.754-03:00  INFO 21356 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 6.644 seconds (process running for 7.457)
+2025-02-03T01:08:32.763-03:00  INFO 21356 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T01:50:34.550-03:00  WARN 21356 --- [vendas-app] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m34s267ms210µs100ns).
+2025-02-03T02:01:15.304-03:00  INFO 21356 --- [vendas-app] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-03T02:01:15.306-03:00  INFO 21356 --- [vendas-app] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-03T02:01:15.340-03:00  INFO 21356 --- [vendas-app] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 34 ms
+2025-02-03T09:13:11.766-03:00  WARN 21356 --- [vendas-app] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h59m19s195ms250µs100ns).
+2025-02-03T10:33:02.665-03:00  INFO 21752 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 21752 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T10:33:02.670-03:00  INFO 21752 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T10:33:03.356-03:00  WARN 21752 --- [vendas-app] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: http://${send.pulse.url} is malformed
+2025-02-03T10:33:03.368-03:00  INFO 21752 --- [vendas-app] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-03T10:33:03.387-03:00 ERROR 21752 --- [vendas-app] [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: http://${send.pulse.url} is malformed
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.getUrl(FeignClientsRegistrar.java:128) ~[spring-cloud-openfeign-core-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.getUrl(FeignClientsRegistrar.java:371) ~[spring-cloud-openfeign-core-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.eagerlyRegisterFeignClientBeanDefinition(FeignClientsRegistrar.java:227) ~[spring-cloud-openfeign-core-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerFeignClient(FeignClientsRegistrar.java:216) ~[spring-cloud-openfeign-core-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:205) ~[spring-cloud-openfeign-core-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:155) ~[spring-cloud-openfeign-core-4.2.0.jar:4.2.0]
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:397) ~[spring-context-6.2.1.jar:6.2.1]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:396) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:149) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:121) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.unixverso.vendas.vendas_app.VendasAppApplication.main(VendasAppApplication.java:24) ~[classes/:na]
+Caused by: java.net.MalformedURLException: Illegal character found in host: '{'
+	at java.base/java.net.URL.<init>(URL.java:806) ~[na:na]
+	at java.base/java.net.URL.<init>(URL.java:654) ~[na:na]
+	at java.base/java.net.URL.<init>(URL.java:590) ~[na:na]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.getUrl(FeignClientsRegistrar.java:125) ~[spring-cloud-openfeign-core-4.2.0.jar:4.2.0]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Illegal character found in host: '{'
+	at java.base/java.net.URLStreamHandler.setURL(URLStreamHandler.java:523) ~[na:na]
+	at java.base/java.net.URLStreamHandler.parseURL(URLStreamHandler.java:326) ~[na:na]
+	at java.base/java.net.URL.<init>(URL.java:801) ~[na:na]
+	... 27 common frames omitted
+
+2025-02-03T10:36:43.281-03:00  INFO 18648 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 18648 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T10:36:43.285-03:00  INFO 18648 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T10:36:44.149-03:00  INFO 18648 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T10:36:44.214-03:00  INFO 18648 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2025-02-03T10:36:44.434-03:00  INFO 18648 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c5666eb8-2153-3132-81ef-422c5492f9d7
+2025-02-03T10:36:44.881-03:00  INFO 18648 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T10:36:44.910-03:00  INFO 18648 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T10:36:44.911-03:00  INFO 18648 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T10:36:45.009-03:00  INFO 18648 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T10:36:45.010-03:00  INFO 18648 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1660 ms
+2025-02-03T10:36:45.191-03:00  INFO 18648 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T10:36:45.302-03:00  INFO 18648 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T10:36:45.353-03:00  INFO 18648 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T10:36:45.822-03:00  INFO 18648 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T10:36:45.871-03:00  INFO 18648 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T10:36:46.154-03:00  INFO 18648 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T10:36:46.158-03:00  INFO 18648 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T10:36:46.244-03:00  INFO 18648 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T10:36:47.286-03:00  INFO 18648 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T10:36:47.347-03:00  INFO 18648 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T10:36:47.834-03:00  INFO 18648 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T10:36:48.104-03:00  WARN 18648 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T10:36:48.235-03:00  INFO 18648 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T10:36:48.367-03:00  WARN 18648 --- [vendas-app] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.vault.config.VaultAutoConfiguration': Failed to instantiate [org.springframework.cloud.vault.config.VaultAutoConfiguration]: Constructor threw exception
+2025-02-03T10:36:48.370-03:00  INFO 18648 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T10:36:48.375-03:00  INFO 18648 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T10:36:48.377-03:00  INFO 18648 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T10:36:48.380-03:00  INFO 18648 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-02-03T10:36:48.399-03:00  INFO 18648 --- [vendas-app] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-03T10:36:48.414-03:00 ERROR 18648 --- [vendas-app] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.vault.config.VaultAutoConfiguration': Failed to instantiate [org.springframework.cloud.vault.config.VaultAutoConfiguration]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.unixverso.vendas.vendas_app.VendasAppApplication.main(VendasAppApplication.java:24) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.vault.config.VaultAutoConfiguration]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Illegal character in path at index 1: ${VAULT_ADDR}
+	at java.base/java.net.URI.create(URI.java:932) ~[na:na]
+	at org.springframework.cloud.vault.config.VaultConfiguration.createVaultEndpoint(VaultConfiguration.java:124) ~[spring-cloud-vault-config-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.vault.config.VaultAutoConfiguration.<init>(VaultAutoConfiguration.java:95) ~[spring-cloud-vault-config-4.2.0.jar:4.2.0]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 23 common frames omitted
+Caused by: java.net.URISyntaxException: Illegal character in path at index 1: ${VAULT_ADDR}
+	at java.base/java.net.URI$Parser.fail(URI.java:2995) ~[na:na]
+	at java.base/java.net.URI$Parser.checkChars(URI.java:3166) ~[na:na]
+	at java.base/java.net.URI$Parser.parseHierarchical(URI.java:3248) ~[na:na]
+	at java.base/java.net.URI$Parser.parse(URI.java:3207) ~[na:na]
+	at java.base/java.net.URI.<init>(URI.java:645) ~[na:na]
+	at java.base/java.net.URI.create(URI.java:930) ~[na:na]
+	... 29 common frames omitted
+
+2025-02-03T10:43:52.047-03:00  INFO 20724 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 20724 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T10:43:52.051-03:00  INFO 20724 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T10:43:53.181-03:00  INFO 20724 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T10:43:53.246-03:00  INFO 20724 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2025-02-03T10:43:53.438-03:00  INFO 20724 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c5666eb8-2153-3132-81ef-422c5492f9d7
+2025-02-03T10:43:53.815-03:00  INFO 20724 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T10:43:53.833-03:00  INFO 20724 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T10:43:53.840-03:00  INFO 20724 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T10:43:53.907-03:00  INFO 20724 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T10:43:53.908-03:00  INFO 20724 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1782 ms
+2025-02-03T10:43:54.065-03:00  INFO 20724 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T10:43:54.119-03:00  INFO 20724 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T10:43:54.154-03:00  INFO 20724 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T10:43:54.420-03:00  INFO 20724 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T10:43:54.451-03:00  INFO 20724 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T10:43:54.675-03:00  INFO 20724 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T10:43:54.679-03:00  INFO 20724 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T10:43:54.750-03:00  INFO 20724 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T10:43:55.705-03:00  INFO 20724 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T10:43:55.752-03:00  INFO 20724 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T10:43:56.221-03:00  INFO 20724 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T10:43:56.442-03:00  WARN 20724 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T10:43:56.575-03:00  INFO 20724 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T10:43:56.964-03:00  WARN 20724 --- [vendas-app] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vaultTemplate' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Failed to instantiate [org.springframework.vault.core.VaultTemplate]: Factory method 'vaultTemplate' threw exception with message: Error creating bean with name 'vaultSessionManager' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vaultSessionManager' parameter 0: Error creating bean with name 'clientAuthentication' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Failed to instantiate [org.springframework.vault.authentication.ClientAuthentication]: Factory method 'clientAuthentication' threw exception with message: Cannot create authentication mechanism for TOKEN. This method requires either a Token (spring.cloud.vault.token) or a token file at ~/.vault-token.
+2025-02-03T10:43:56.968-03:00  INFO 20724 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T10:43:56.974-03:00  INFO 20724 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T10:43:56.977-03:00  INFO 20724 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T10:43:56.979-03:00  INFO 20724 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-02-03T10:43:56.993-03:00  INFO 20724 --- [vendas-app] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-03T10:43:57.009-03:00 ERROR 20724 --- [vendas-app] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vaultTemplate' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Failed to instantiate [org.springframework.vault.core.VaultTemplate]: Factory method 'vaultTemplate' threw exception with message: Error creating bean with name 'vaultSessionManager' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vaultSessionManager' parameter 0: Error creating bean with name 'clientAuthentication' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Failed to instantiate [org.springframework.vault.authentication.ClientAuthentication]: Factory method 'clientAuthentication' threw exception with message: Cannot create authentication mechanism for TOKEN. This method requires either a Token (spring.cloud.vault.token) or a token file at ~/.vault-token.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.unixverso.vendas.vendas_app.VendasAppApplication.main(VendasAppApplication.java:24) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.vault.core.VaultTemplate]: Factory method 'vaultTemplate' threw exception with message: Error creating bean with name 'vaultSessionManager' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vaultSessionManager' parameter 0: Error creating bean with name 'clientAuthentication' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Failed to instantiate [org.springframework.vault.authentication.ClientAuthentication]: Factory method 'clientAuthentication' threw exception with message: Cannot create authentication mechanism for TOKEN. This method requires either a Token (spring.cloud.vault.token) or a token file at ~/.vault-token.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vaultSessionManager' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vaultSessionManager' parameter 0: Error creating bean with name 'clientAuthentication' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Failed to instantiate [org.springframework.vault.authentication.ClientAuthentication]: Factory method 'clientAuthentication' threw exception with message: Cannot create authentication mechanism for TOKEN. This method requires either a Token (spring.cloud.vault.token) or a token file at ~/.vault-token.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1489) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1450) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:516) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:371) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:364) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1290) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.cloud.vault.config.VaultAutoConfiguration.vaultTemplate(VaultAutoConfiguration.java:168) ~[spring-cloud-vault-config-4.2.0.jar:4.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'clientAuthentication' defined in class path resource [org/springframework/cloud/vault/config/VaultAutoConfiguration.class]: Failed to instantiate [org.springframework.vault.authentication.ClientAuthentication]: Factory method 'clientAuthentication' threw exception with message: Cannot create authentication mechanism for TOKEN. This method requires either a Token (spring.cloud.vault.token) or a token file at ~/.vault-token.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 43 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.vault.authentication.ClientAuthentication]: Factory method 'clientAuthentication' threw exception with message: Cannot create authentication mechanism for TOKEN. This method requires either a Token (spring.cloud.vault.token) or a token file at ~/.vault-token.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 56 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot create authentication mechanism for TOKEN. This method requires either a Token (spring.cloud.vault.token) or a token file at ~/.vault-token.
+	at org.springframework.cloud.vault.config.ClientAuthenticationFactory.tokenAuthentication(ClientAuthenticationFactory.java:438) ~[spring-cloud-vault-config-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.vault.config.ClientAuthenticationFactory.createClientAuthentication(ClientAuthenticationFactory.java:150) ~[spring-cloud-vault-config-4.2.0.jar:4.2.0]
+	at org.springframework.cloud.vault.config.VaultAutoConfiguration.clientAuthentication(VaultAutoConfiguration.java:232) ~[spring-cloud-vault-config-4.2.0.jar:4.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 59 common frames omitted
+
+2025-02-03T10:46:32.726-03:00  INFO 15928 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 15928 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T10:46:32.729-03:00  INFO 15928 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T10:46:33.565-03:00  INFO 15928 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T10:46:33.625-03:00  INFO 15928 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2025-02-03T10:46:33.801-03:00  INFO 15928 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T10:46:34.158-03:00  INFO 15928 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T10:46:34.172-03:00  INFO 15928 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T10:46:34.173-03:00  INFO 15928 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T10:46:34.239-03:00  INFO 15928 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T10:46:34.240-03:00  INFO 15928 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1448 ms
+2025-02-03T10:46:34.383-03:00  INFO 15928 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T10:46:34.442-03:00  INFO 15928 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T10:46:34.475-03:00  INFO 15928 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T10:46:34.695-03:00  INFO 15928 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T10:46:34.722-03:00  INFO 15928 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T10:46:34.865-03:00  INFO 15928 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T10:46:34.868-03:00  INFO 15928 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T10:46:34.924-03:00  INFO 15928 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T10:46:35.635-03:00  INFO 15928 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T10:46:35.672-03:00  INFO 15928 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T10:46:36.060-03:00  INFO 15928 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T10:46:36.269-03:00  WARN 15928 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T10:46:36.392-03:00  INFO 15928 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T10:46:36.547-03:00  INFO 15928 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T10:46:36.564-03:00  INFO 15928 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.356 seconds (process running for 4.895)
+2025-02-03T10:46:36.568-03:00  INFO 15928 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T10:52:08.526-03:00  INFO 15928 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T10:52:08.554-03:00  INFO 15928 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T10:52:08.560-03:00  INFO 15928 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T10:52:08.567-03:00  INFO 15928 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T10:52:08.572-03:00  INFO 15928 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T10:52:35.479-03:00  INFO 22204 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 22204 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T10:52:35.483-03:00  INFO 22204 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T10:52:36.520-03:00  INFO 22204 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T10:52:36.611-03:00  INFO 22204 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2025-02-03T10:52:36.813-03:00  INFO 22204 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T10:52:37.220-03:00  INFO 22204 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T10:52:37.235-03:00  INFO 22204 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T10:52:37.236-03:00  INFO 22204 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T10:52:37.319-03:00  INFO 22204 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T10:52:37.320-03:00  INFO 22204 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1751 ms
+2025-02-03T10:52:37.503-03:00  INFO 22204 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T10:52:37.563-03:00  INFO 22204 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T10:52:37.600-03:00  INFO 22204 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T10:52:37.882-03:00  INFO 22204 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T10:52:37.918-03:00  INFO 22204 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T10:52:38.098-03:00  INFO 22204 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T10:52:38.102-03:00  INFO 22204 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T10:52:38.161-03:00  INFO 22204 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T10:52:39.089-03:00  INFO 22204 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T10:52:39.129-03:00  INFO 22204 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T10:52:39.574-03:00  INFO 22204 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T10:52:39.814-03:00  WARN 22204 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T10:52:39.968-03:00  INFO 22204 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T10:52:40.253-03:00  INFO 22204 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T10:52:40.272-03:00  INFO 22204 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 5.364 seconds (process running for 5.985)
+2025-02-03T10:52:40.276-03:00  INFO 22204 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T10:53:43.185-03:00  INFO 22204 --- [vendas-app] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-03T10:53:43.186-03:00  INFO 22204 --- [vendas-app] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-03T10:53:43.188-03:00  INFO 22204 --- [vendas-app] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-03T10:53:44.836-03:00  INFO 22204 --- [vendas-app] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1118 ms
+2025-02-03T11:39:24.920-03:00  WARN 22204 --- [vendas-app] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m46s716ms415µs500ns).
+2025-02-03T12:05:35.129-03:00  INFO 22204 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T12:05:35.153-03:00  INFO 22204 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T12:05:35.159-03:00  INFO 22204 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:05:35.170-03:00  INFO 22204 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:05:35.175-03:00  INFO 22204 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:05:46.529-03:00  INFO 1828 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 1828 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:05:46.531-03:00  INFO 1828 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:05:47.607-03:00  INFO 1828 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:05:47.682-03:00  INFO 1828 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 1 JPA repository interface.
+2025-02-03T12:05:47.892-03:00  INFO 1828 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:05:48.377-03:00  INFO 1828 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:05:48.404-03:00  INFO 1828 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:05:48.405-03:00  INFO 1828 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:05:48.504-03:00  INFO 1828 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:05:48.505-03:00  INFO 1828 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1905 ms
+2025-02-03T12:05:48.717-03:00  INFO 1828 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:05:48.806-03:00  INFO 1828 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:05:48.858-03:00  INFO 1828 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:05:49.229-03:00  INFO 1828 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:05:49.271-03:00  INFO 1828 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:05:49.499-03:00  INFO 1828 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user={DB_USER}
+2025-02-03T12:05:49.502-03:00  INFO 1828 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:05:49.584-03:00  INFO 1828 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:05:50.647-03:00  INFO 1828 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:05:50.706-03:00  INFO 1828 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:05:50.723-03:00  WARN 1828 --- [vendas-app] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendPulseService': Injection of autowired dependencies failed
+2025-02-03T12:05:50.724-03:00  INFO 1828 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:05:50.730-03:00  INFO 1828 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:05:50.733-03:00  INFO 1828 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:05:50.735-03:00  INFO 1828 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-02-03T12:05:50.750-03:00  INFO 1828 --- [vendas-app] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-03T12:05:50.773-03:00 ERROR 1828 --- [vendas-app] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendPulseService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1441) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.unixverso.vendas.vendas_app.VendasAppApplication.main(VendasAppApplication.java:24) ~[classes/:na]
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'sendpulse.client.id' in value "${sendpulse.client.id}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:416) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:963) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1541) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 19 common frames omitted
+
+2025-02-03T12:32:40.874-03:00  INFO 696 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 696 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:32:40.878-03:00  INFO 696 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:32:41.841-03:00  INFO 696 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:32:41.905-03:00  INFO 696 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2025-02-03T12:32:42.078-03:00  INFO 696 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:32:42.467-03:00  INFO 696 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:32:42.483-03:00  INFO 696 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:32:42.484-03:00  INFO 696 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:32:42.540-03:00  INFO 696 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:32:42.541-03:00  INFO 696 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1601 ms
+2025-02-03T12:32:42.668-03:00  INFO 696 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:32:42.723-03:00  INFO 696 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:32:42.752-03:00  INFO 696 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:32:42.993-03:00  INFO 696 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:32:43.021-03:00  INFO 696 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:32:43.167-03:00  INFO 696 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user={DB_USER}
+2025-02-03T12:32:43.169-03:00  INFO 696 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:32:43.221-03:00  INFO 696 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:32:43.970-03:00  INFO 696 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:32:44.008-03:00  INFO 696 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:32:44.024-03:00  WARN 696 --- [vendas-app] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendPulseService': Injection of autowired dependencies failed
+2025-02-03T12:32:44.026-03:00  INFO 696 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:32:44.031-03:00  INFO 696 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:32:44.034-03:00  INFO 696 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:32:44.036-03:00  INFO 696 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-02-03T12:32:44.050-03:00  INFO 696 --- [vendas-app] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-03T12:32:44.066-03:00 ERROR 696 --- [vendas-app] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendPulseService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1441) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.unixverso.vendas.vendas_app.VendasAppApplication.main(VendasAppApplication.java:24) ~[classes/:na]
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'sendpulse.client.id' in value "${sendpulse.client.id}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:416) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226) ~[spring-core-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:963) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1541) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 19 common frames omitted
+
+2025-02-03T12:35:16.580-03:00  INFO 22964 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 22964 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:35:16.587-03:00  INFO 22964 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:35:17.436-03:00  INFO 22964 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:35:17.515-03:00  INFO 22964 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2025-02-03T12:35:17.702-03:00  INFO 22964 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:35:18.076-03:00  INFO 22964 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:35:18.090-03:00  INFO 22964 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:35:18.090-03:00  INFO 22964 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:35:18.152-03:00  INFO 22964 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:35:18.153-03:00  INFO 22964 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1500 ms
+2025-02-03T12:35:18.278-03:00  INFO 22964 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:35:18.326-03:00  INFO 22964 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:35:18.355-03:00  INFO 22964 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:35:18.598-03:00  INFO 22964 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:35:18.626-03:00  INFO 22964 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:35:18.776-03:00  INFO 22964 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user={DB_USER}
+2025-02-03T12:35:18.778-03:00  INFO 22964 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:35:18.828-03:00  INFO 22964 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:35:19.510-03:00  INFO 22964 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:35:19.548-03:00  INFO 22964 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:35:19.990-03:00  INFO 22964 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T12:35:20.245-03:00  WARN 22964 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T12:35:20.378-03:00  INFO 22964 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T12:35:20.540-03:00  INFO 22964 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T12:35:20.556-03:00  INFO 22964 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.509 seconds (process running for 5.089)
+2025-02-03T12:35:20.561-03:00  INFO 22964 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T12:35:29.959-03:00  INFO 22964 --- [vendas-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-03T12:35:29.960-03:00  INFO 22964 --- [vendas-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-03T12:35:29.961-03:00  INFO 22964 --- [vendas-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-03T12:35:31.799-03:00  INFO 22964 --- [vendas-app] [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 972 ms
+2025-02-03T12:38:36.920-03:00  INFO 22964 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T12:38:36.934-03:00  INFO 22964 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T12:38:36.939-03:00  INFO 22964 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:38:36.945-03:00  INFO 22964 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:38:36.948-03:00  INFO 22964 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:38:45.767-03:00  INFO 2184 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 2184 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:38:45.770-03:00  INFO 2184 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:38:46.585-03:00  INFO 2184 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:38:46.651-03:00  INFO 2184 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2025-02-03T12:38:46.822-03:00  INFO 2184 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:38:47.193-03:00  INFO 2184 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:38:47.208-03:00  INFO 2184 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:38:47.209-03:00  INFO 2184 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:38:47.273-03:00  INFO 2184 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:38:47.274-03:00  INFO 2184 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1440 ms
+2025-02-03T12:38:47.418-03:00  INFO 2184 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:38:47.466-03:00  INFO 2184 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:38:47.495-03:00  INFO 2184 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:38:47.753-03:00  INFO 2184 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:38:47.785-03:00  INFO 2184 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:38:47.954-03:00  INFO 2184 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user={DB_USER}
+2025-02-03T12:38:47.956-03:00  INFO 2184 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:38:48.008-03:00  INFO 2184 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:38:48.691-03:00  INFO 2184 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:38:48.729-03:00  INFO 2184 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:38:49.133-03:00  INFO 2184 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T12:38:49.365-03:00  WARN 2184 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T12:38:49.497-03:00  INFO 2184 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T12:38:49.631-03:00  INFO 2184 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T12:38:49.647-03:00  INFO 2184 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.405 seconds (process running for 4.903)
+2025-02-03T12:38:49.651-03:00  INFO 2184 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T12:39:00.533-03:00  INFO 2184 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T12:39:00.547-03:00  INFO 2184 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T12:39:00.552-03:00  INFO 2184 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:39:00.557-03:00  INFO 2184 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:39:00.561-03:00  INFO 2184 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:39:08.719-03:00  INFO 26604 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 26604 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:39:08.722-03:00  INFO 26604 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:39:09.598-03:00  INFO 26604 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:39:09.661-03:00  INFO 26604 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2025-02-03T12:39:09.840-03:00  INFO 26604 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:39:10.181-03:00  INFO 26604 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:39:10.198-03:00  INFO 26604 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:39:10.199-03:00  INFO 26604 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:39:10.263-03:00  INFO 26604 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:39:10.264-03:00  INFO 26604 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1476 ms
+2025-02-03T12:39:10.420-03:00  INFO 26604 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:39:10.467-03:00  INFO 26604 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:39:10.496-03:00  INFO 26604 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:39:10.738-03:00  INFO 26604 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:39:10.766-03:00  INFO 26604 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:39:10.916-03:00  INFO 26604 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user={DB_USER}
+2025-02-03T12:39:10.918-03:00  INFO 26604 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:39:10.969-03:00  INFO 26604 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:39:11.648-03:00  INFO 26604 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:39:11.687-03:00  INFO 26604 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:39:11.692-03:00  INFO 26604 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T12:39:12.115-03:00  INFO 26604 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T12:39:12.325-03:00  WARN 26604 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T12:39:12.459-03:00  INFO 26604 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T12:39:12.592-03:00  INFO 26604 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T12:39:12.609-03:00  INFO 26604 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.391 seconds (process running for 4.922)
+2025-02-03T12:39:12.613-03:00  INFO 26604 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T12:39:12.614-03:00  INFO 26604 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T12:42:19.482-03:00  INFO 26604 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T12:42:19.497-03:00  INFO 26604 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T12:42:19.502-03:00  INFO 26604 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:42:19.507-03:00  INFO 26604 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:42:19.510-03:00  INFO 26604 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:42:33.083-03:00  INFO 23904 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 23904 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:42:33.087-03:00  INFO 23904 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:42:33.926-03:00  INFO 23904 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:42:33.990-03:00  INFO 23904 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2025-02-03T12:42:34.173-03:00  INFO 23904 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:42:34.556-03:00  INFO 23904 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:42:34.574-03:00  INFO 23904 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:42:34.575-03:00  INFO 23904 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:42:34.634-03:00  INFO 23904 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:42:34.635-03:00  INFO 23904 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1479 ms
+2025-02-03T12:42:34.786-03:00  INFO 23904 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:42:34.840-03:00  INFO 23904 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:42:34.876-03:00  INFO 23904 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:42:35.163-03:00  INFO 23904 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:42:35.192-03:00  INFO 23904 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:42:35.338-03:00  INFO 23904 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user={DB_USER}
+2025-02-03T12:42:35.341-03:00  INFO 23904 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:42:35.391-03:00  INFO 23904 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:42:36.092-03:00  INFO 23904 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:42:36.137-03:00  INFO 23904 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:42:36.143-03:00  INFO 23904 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T12:42:36.606-03:00  INFO 23904 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T12:42:36.816-03:00  WARN 23904 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T12:42:36.949-03:00  INFO 23904 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T12:42:37.089-03:00  INFO 23904 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T12:42:37.106-03:00  INFO 23904 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.581 seconds (process running for 5.076)
+2025-02-03T12:42:37.112-03:00  INFO 23904 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T12:42:37.112-03:00  INFO 23904 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T12:47:51.484-03:00  INFO 23904 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T12:47:51.497-03:00  INFO 23904 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T12:47:51.502-03:00  INFO 23904 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:47:51.507-03:00  INFO 23904 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:47:51.510-03:00  INFO 23904 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:48:00.150-03:00  INFO 19352 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 19352 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:48:00.154-03:00  INFO 19352 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:48:01.003-03:00  INFO 19352 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:48:01.077-03:00  INFO 19352 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 1 JPA repository interface.
+2025-02-03T12:48:01.262-03:00  INFO 19352 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:48:01.617-03:00  INFO 19352 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:48:01.638-03:00  INFO 19352 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:48:01.640-03:00  INFO 19352 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:48:01.712-03:00  INFO 19352 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:48:01.714-03:00  INFO 19352 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1478 ms
+2025-02-03T12:48:01.884-03:00  INFO 19352 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:48:01.952-03:00  INFO 19352 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:48:01.984-03:00  INFO 19352 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:48:02.240-03:00  INFO 19352 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:48:02.270-03:00  INFO 19352 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:48:02.420-03:00  INFO 19352 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user={DB_USER}
+2025-02-03T12:48:02.422-03:00  INFO 19352 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:48:02.473-03:00  INFO 19352 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:48:03.184-03:00  INFO 19352 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:48:03.225-03:00  INFO 19352 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:48:03.231-03:00  INFO 19352 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T12:48:03.701-03:00  INFO 19352 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T12:48:03.914-03:00  WARN 19352 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T12:48:04.045-03:00  INFO 19352 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T12:48:04.183-03:00  INFO 19352 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T12:48:04.200-03:00  INFO 19352 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.561 seconds (process running for 5.045)
+2025-02-03T12:48:04.204-03:00  INFO 19352 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T12:48:04.205-03:00  INFO 19352 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T12:57:42.920-03:00  INFO 19352 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T12:57:42.934-03:00  INFO 19352 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T12:57:42.939-03:00  INFO 19352 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:57:42.943-03:00  INFO 19352 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:57:42.945-03:00  INFO 19352 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:57:54.068-03:00  INFO 20844 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 20844 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:57:54.071-03:00  INFO 20844 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:57:54.933-03:00  INFO 20844 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:57:54.996-03:00  INFO 20844 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2025-02-03T12:57:55.179-03:00  INFO 20844 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:57:55.524-03:00  INFO 20844 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:57:55.540-03:00  INFO 20844 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:57:55.541-03:00  INFO 20844 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:57:55.656-03:00  INFO 20844 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:57:55.656-03:00  INFO 20844 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1518 ms
+2025-02-03T12:57:55.786-03:00  INFO 20844 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:57:55.836-03:00  INFO 20844 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:57:55.866-03:00  INFO 20844 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:57:56.105-03:00  INFO 20844 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:57:56.135-03:00  INFO 20844 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:57:56.283-03:00  INFO 20844 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T12:57:56.286-03:00  INFO 20844 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:57:56.335-03:00  INFO 20844 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:57:57.012-03:00  INFO 20844 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:57:57.051-03:00  INFO 20844 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:57:57.056-03:00  INFO 20844 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T12:57:57.478-03:00  INFO 20844 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T12:57:57.692-03:00  WARN 20844 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T12:57:57.823-03:00  INFO 20844 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T12:57:57.955-03:00  INFO 20844 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T12:57:57.971-03:00  INFO 20844 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.441 seconds (process running for 4.933)
+2025-02-03T12:57:57.975-03:00  INFO 20844 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T12:57:57.976-03:00  INFO 20844 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T12:59:11.723-03:00  INFO 20844 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T12:59:11.736-03:00  INFO 20844 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T12:59:11.741-03:00  INFO 20844 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:59:11.746-03:00  INFO 20844 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T12:59:11.749-03:00  INFO 20844 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T12:59:19.568-03:00  INFO 14536 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 14536 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T12:59:19.571-03:00  INFO 14536 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T12:59:20.413-03:00  INFO 14536 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T12:59:20.476-03:00  INFO 14536 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2025-02-03T12:59:20.650-03:00  INFO 14536 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T12:59:20.991-03:00  INFO 14536 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T12:59:21.005-03:00  INFO 14536 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T12:59:21.006-03:00  INFO 14536 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T12:59:21.070-03:00  INFO 14536 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T12:59:21.072-03:00  INFO 14536 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1425 ms
+2025-02-03T12:59:21.195-03:00  INFO 14536 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T12:59:21.242-03:00  INFO 14536 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T12:59:21.272-03:00  INFO 14536 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T12:59:21.508-03:00  INFO 14536 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T12:59:21.537-03:00  INFO 14536 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T12:59:21.688-03:00  INFO 14536 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T12:59:21.690-03:00  INFO 14536 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T12:59:21.743-03:00  INFO 14536 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T12:59:22.535-03:00  INFO 14536 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T12:59:22.574-03:00  INFO 14536 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T12:59:22.581-03:00  INFO 14536 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T12:59:22.581-03:00  INFO 14536 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.url
+2025-02-03T12:59:23.001-03:00  INFO 14536 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T12:59:23.227-03:00  WARN 14536 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T12:59:23.356-03:00  INFO 14536 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T12:59:23.487-03:00  INFO 14536 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T12:59:23.504-03:00  INFO 14536 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.432 seconds (process running for 4.943)
+2025-02-03T12:59:23.508-03:00  INFO 14536 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T12:59:23.509-03:00  INFO 14536 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T12:59:23.509-03:00  INFO 14536 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Send Pulse URL!null
+2025-02-03T13:00:19.814-03:00  INFO 14536 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T13:00:19.828-03:00  INFO 14536 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T13:00:19.832-03:00  INFO 14536 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:00:19.836-03:00  INFO 14536 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T13:00:19.839-03:00  INFO 14536 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T13:00:46.487-03:00  INFO 23612 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 23612 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T13:00:46.492-03:00  INFO 23612 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T13:00:47.729-03:00  INFO 23612 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T13:00:47.793-03:00  INFO 23612 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2025-02-03T13:00:48.042-03:00  INFO 23612 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T13:00:48.442-03:00  INFO 23612 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T13:00:48.458-03:00  INFO 23612 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T13:00:48.459-03:00  INFO 23612 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T13:00:48.519-03:00  INFO 23612 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T13:00:48.520-03:00  INFO 23612 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1916 ms
+2025-02-03T13:00:48.698-03:00  INFO 23612 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T13:00:48.751-03:00  INFO 23612 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T13:00:48.784-03:00  INFO 23612 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T13:00:49.005-03:00  INFO 23612 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T13:00:49.034-03:00  INFO 23612 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T13:00:49.348-03:00  INFO 23612 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T13:00:49.352-03:00  INFO 23612 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T13:00:49.481-03:00  INFO 23612 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T13:00:50.353-03:00  INFO 23612 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T13:00:50.392-03:00  INFO 23612 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:00:50.398-03:00  INFO 23612 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T13:00:50.399-03:00  INFO 23612 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.url
+2025-02-03T13:00:50.796-03:00  INFO 23612 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T13:00:51.015-03:00  WARN 23612 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T13:00:51.150-03:00  INFO 23612 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T13:00:51.287-03:00  INFO 23612 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T13:00:51.303-03:00  INFO 23612 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 5.66 seconds (process running for 6.305)
+2025-02-03T13:00:51.308-03:00  INFO 23612 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T13:00:51.308-03:00  INFO 23612 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T13:00:51.309-03:00  INFO 23612 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Send Pulse URL!null
+2025-02-03T13:37:31.723-03:00  WARN 23612 --- [vendas-app] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m12s402ms645µs500ns).
+2025-02-03T13:37:43.925-03:00  INFO 23612 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T13:37:43.937-03:00  INFO 23612 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T13:37:43.941-03:00  INFO 23612 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:37:43.945-03:00  INFO 23612 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T13:37:43.948-03:00  INFO 23612 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T13:37:51.855-03:00  INFO 7560 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 7560 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T13:37:51.858-03:00  INFO 7560 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T13:37:52.658-03:00  INFO 7560 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T13:37:52.714-03:00  INFO 7560 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2025-02-03T13:37:52.877-03:00  INFO 7560 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T13:37:53.199-03:00  INFO 7560 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T13:37:53.213-03:00  INFO 7560 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T13:37:53.215-03:00  INFO 7560 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T13:37:53.268-03:00  INFO 7560 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T13:37:53.269-03:00  INFO 7560 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1352 ms
+2025-02-03T13:37:53.392-03:00  INFO 7560 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T13:37:53.439-03:00  INFO 7560 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T13:37:53.467-03:00  INFO 7560 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T13:37:53.706-03:00  INFO 7560 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T13:37:53.732-03:00  INFO 7560 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T13:37:53.876-03:00  INFO 7560 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T13:37:53.879-03:00  INFO 7560 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T13:37:53.973-03:00  INFO 7560 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T13:37:54.743-03:00  INFO 7560 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T13:37:54.780-03:00  INFO 7560 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:37:54.786-03:00  INFO 7560 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T13:37:54.787-03:00  INFO 7560 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.url
+2025-02-03T13:37:55.217-03:00  INFO 7560 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T13:37:55.434-03:00  WARN 7560 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T13:37:55.559-03:00  INFO 7560 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T13:37:55.684-03:00  INFO 7560 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T13:37:55.700-03:00  INFO 7560 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.317 seconds (process running for 4.759)
+2025-02-03T13:37:55.704-03:00  INFO 7560 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T13:37:55.705-03:00  INFO 7560 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T13:37:55.705-03:00  INFO 7560 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Send Pulse URL!null
+2025-02-03T13:39:06.892-03:00  INFO 7560 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T13:39:06.905-03:00  INFO 7560 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T13:39:06.910-03:00  INFO 7560 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:39:06.915-03:00  INFO 7560 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T13:39:06.918-03:00  INFO 7560 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T13:39:20.535-03:00  INFO 2376 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 2376 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T13:39:20.538-03:00  INFO 2376 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T13:39:21.493-03:00  INFO 2376 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T13:39:21.604-03:00  INFO 2376 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2025-02-03T13:39:21.811-03:00  INFO 2376 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T13:39:22.178-03:00  INFO 2376 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T13:39:22.195-03:00  INFO 2376 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T13:39:22.196-03:00  INFO 2376 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T13:39:22.271-03:00  INFO 2376 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T13:39:22.272-03:00  INFO 2376 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1672 ms
+2025-02-03T13:39:22.413-03:00  INFO 2376 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T13:39:22.467-03:00  INFO 2376 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T13:39:22.497-03:00  INFO 2376 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T13:39:22.739-03:00  INFO 2376 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T13:39:22.769-03:00  INFO 2376 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T13:39:22.946-03:00  INFO 2376 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T13:39:22.949-03:00  INFO 2376 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T13:39:23.013-03:00  INFO 2376 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T13:39:23.831-03:00  INFO 2376 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T13:39:23.873-03:00  INFO 2376 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:39:23.879-03:00  INFO 2376 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T13:39:23.880-03:00  INFO 2376 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.url
+2025-02-03T13:39:24.305-03:00  INFO 2376 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T13:39:24.528-03:00  WARN 2376 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T13:39:24.667-03:00  INFO 2376 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T13:39:24.802-03:00  INFO 2376 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T13:39:24.817-03:00  INFO 2376 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.802 seconds (process running for 5.396)
+2025-02-03T13:39:24.821-03:00  INFO 2376 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T13:39:24.822-03:00  INFO 2376 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T13:39:24.822-03:00  INFO 2376 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Send Pulse URL!null
+2025-02-03T13:40:00.206-03:00  INFO 2376 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T13:40:00.219-03:00  INFO 2376 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T13:40:00.224-03:00  INFO 2376 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:40:00.229-03:00  INFO 2376 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T13:40:00.231-03:00  INFO 2376 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T13:40:10.351-03:00  INFO 7120 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Starting VendasAppApplication using Java 22.0.2 with PID 7120 (C:\Users\elson\Documents\Java\vendas-app\target\classes started by elson in C:\Users\elson\Documents\Java\vendas-app)
+2025-02-03T13:40:10.354-03:00  INFO 7120 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : The following 1 profile is active: "dev"
+2025-02-03T13:40:11.180-03:00  INFO 7120 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T13:40:11.245-03:00  INFO 7120 --- [vendas-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2025-02-03T13:40:11.422-03:00  INFO 7120 --- [vendas-app] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24b9fdf7-2158-3f59-949f-637bd2413eb3
+2025-02-03T13:40:11.773-03:00  INFO 7120 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T13:40:11.787-03:00  INFO 7120 --- [vendas-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T13:40:11.788-03:00  INFO 7120 --- [vendas-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T13:40:11.844-03:00  INFO 7120 --- [vendas-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-02-03T13:40:11.845-03:00  INFO 7120 --- [vendas-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1429 ms
+2025-02-03T13:40:11.983-03:00  INFO 7120 --- [vendas-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T13:40:12.033-03:00  INFO 7120 --- [vendas-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-03T13:40:12.066-03:00  INFO 7120 --- [vendas-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T13:40:12.346-03:00  INFO 7120 --- [vendas-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T13:40:12.389-03:00  INFO 7120 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T13:40:12.546-03:00  INFO 7120 --- [vendas-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vendas user=ROOT
+2025-02-03T13:40:12.549-03:00  INFO 7120 --- [vendas-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T13:40:12.598-03:00  INFO 7120 --- [vendas-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T13:40:13.290-03:00  INFO 7120 --- [vendas-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T13:40:13.326-03:00  INFO 7120 --- [vendas-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:40:13.332-03:00  INFO 7120 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.password
+2025-02-03T13:40:13.333-03:00  INFO 7120 --- [vendas-app] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.unixverso.vendas.vendas_app.VendasAppApplication.url
+2025-02-03T13:40:13.750-03:00  INFO 7120 --- [vendas-app] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-02-03T13:40:13.960-03:00  WARN 7120 --- [vendas-app] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-03T13:40:14.098-03:00  INFO 7120 --- [vendas-app] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vendas'
+2025-02-03T13:40:14.231-03:00  INFO 7120 --- [vendas-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-02-03T13:40:14.247-03:00  INFO 7120 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Started VendasAppApplication in 4.445 seconds (process running for 4.943)
+2025-02-03T13:40:14.251-03:00  INFO 7120 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Aplicacao iniciada com sucesso!
+2025-02-03T13:40:14.252-03:00  INFO 7120 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : H2 pass!null
+2025-02-03T13:40:14.253-03:00  INFO 7120 --- [vendas-app] [main] c.u.v.vendas_app.VendasAppApplication    : Send Pulse URL!null
+2025-02-03T13:43:38.390-03:00  INFO 7120 --- [vendas-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T13:43:38.403-03:00  INFO 7120 --- [vendas-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T13:43:38.409-03:00  INFO 7120 --- [vendas-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T13:43:38.414-03:00  INFO 7120 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T13:43:38.420-03:00  INFO 7120 --- [vendas-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

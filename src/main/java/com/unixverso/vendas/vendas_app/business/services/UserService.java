@@ -34,6 +34,11 @@ public class UserService {
         logger.info("List of users: " + entity);
         List<UserResponseDTO> dto = userMapper.toListUserDTO(entity);
         logger.info("List of users: " + dto);
+        // logger.warn("alerta");
+        // logger.error("erro");
+        // logger.debug("debug");
+        // logger.trace("trace");
+        // logger.info("info");
 
         return dto;
     }

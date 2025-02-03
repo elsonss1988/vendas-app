@@ -15,5 +15,5 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     Optional<UserEntity> findByEmail(String email);
 
     @Transactional
-    Boolean deleteByEmail(String email);
+    void deleteByEmail(String email);
 }
