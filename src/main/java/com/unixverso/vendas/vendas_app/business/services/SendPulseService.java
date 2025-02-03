@@ -22,6 +22,7 @@ public class SendPulseService {
     @Value("${sendpulse.client.secret}")
     String clientSecret;
 
+    @Autowired
     private SendPulseClient sendPulseClient;
 
     public AcessTokenResponse acessTokenResponse() {
