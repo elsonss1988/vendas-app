@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.unixverso.vendas.vendas_app.infrastructure.client.dto.AcessTokenRequest;
 import com.unixverso.vendas.vendas_app.infrastructure.client.dto.AcessTokenResponse;
-import com.unixverso.vendas.vendas_app.infrastructure.client.dto.DataEmailRequest;
 import com.unixverso.vendas.vendas_app.infrastructure.client.dto.EmailResponse;
 import com.unixverso.vendas.vendas_app.infrastructure.client.dto.RootDTO;
 
